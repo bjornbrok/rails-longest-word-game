@@ -1,0 +1,13 @@
+<h1>Longest Word Game</h1>
+<h2>Create a word to play</h2>
+<p>
+
+<form action="/score" method="post">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <%= hidden_field_tag :letters, @letters.join(",") %>
+  <input type="text" name="word" placeholder="Type a word">
+  <input type="submit" value="Play">
+</form>
+
+<%= @letters %>
+</p>
